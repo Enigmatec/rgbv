@@ -1,0 +1,21 @@
+﻿@model Service.Models.CaseRejectedEmailModel
+@{
+    ViewData["Title"] = $"Case Rejected [{@Model.IncidentCode}]";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h3> Hello @Model.UserName,  </h3>
+<br />
+
+<p>The case with incident code <b>@Model.IncidentCode</b> was rejected.</p>
+<br />
+<h4>Rejection Reason:</h4>
+<p>@(string.IsNullOrWhiteSpace(Model.Note) ? "None": Model.Note)</p>
+
+
+<br />
+
+
+<br />
+
+<p> Thank you.</p>

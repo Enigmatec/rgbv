@@ -1,0 +1,10 @@
+﻿@model Service.Models.RegistrationMailModel
+@{
+    ViewData["Title"] = "Registration";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h3>Dear @Model.UserName, </h3>
+<br/>
+<br/>
+<p> Your Registration was successful, kindly <a href="@Model.ConfirmationUrl"> click the link </a> to confirm your email.    </p>

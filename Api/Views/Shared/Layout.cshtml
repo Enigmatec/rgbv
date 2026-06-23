@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        table {
+            width: 70%;
+            text-align:center;
+            border-collapse:collapse;
+           
+        }
+        table, th, td {
+            border: 1px solid #555555;
+        }
+        td {
+            vertical-align:middle;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid  #ddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+       
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .bold{
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color:#007d53; padding:15px">
+        <center>
+            <img src="https://reportgbv.ng/assets/img/new-logo.png" height="60" />
+        </center>
+
+    </div>
+    <br />
+    <div>
+        @RenderBody()
+
+        <br />
+        <p>Regards,</p>
+        <p>The Federal Ministry of Women Affairs and Social Development</p>
+    </div>
+
+</body>
+</html>

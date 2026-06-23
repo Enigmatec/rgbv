@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="T:Api.Helpers.Dependency">
+            <summary>
+            Abstracts all dependencies and configuration for the start up class
+            </summary>
+        </member>
+        <member name="M:Api.Helpers.Dependency.AddApiConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            configures the API behavour for requests and responses
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Api.Helpers.Dependency.AddDatabaseConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Setup the databases settings
+            </summary>
+            <param name="services"></param>
+            <param name="Configuration"></param>
+        </member>
+        <member name="M:Api.Helpers.Dependency.AddSettingsandAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Sets up the Configuration Setting and Authentication
+            </summary>
+            <param name="services"></param>
+            <param name="Configuration"></param>
+        </member>
+        <member name="T:Api.Helpers.ModelValidationFilter">
+            <summary>
+            Custom model valiation Filter
+            </summary>
+        </member>
+        <member name="M:Api.Helpers.ModelValidationFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Add model filter before executing a controller method
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Api.Configurations.ErrorHandlingMiddleware">
+            <summary>
+            Adds the Exception handler middle to catch general exceptions
+            </summary>
+        </member>
+        <member name="T:Api.Controllers.BaseController">
+            <summary>
+            Base Controller for setting up Api response object
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.BaseController.ApiResult``1(Service.Models.AppResult{``0})">
+            <summary>
+            All none media responses are processed here
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BaseController.ApiResult(Service.Models.AppResult{System.IO.MemoryStream})">
+            <summary>
+            Media related responses are processed heres
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BaseController.Result``1(CSharpFunctionalExtensions.Result{``0})">
+            <summary>
+            For responses from services that have Status, Message and Data
+            </summary>
+            <typeparam name="TData"></typeparam>
+            <param name="response"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BaseController.Result(CSharpFunctionalExtensions.Result)">
+            <summary>
+            For responses from services that have Status and Message
+            </summary>
+            <param name="response"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.HomeController">
+            Default controller class for swagger URL
+        </member>
+        <member name="M:Api.Controllers.HomeController.Index">
+            <summary>
+            Directs to the home page of swagger doc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.ApiResult`1">
+            <summary>
+            Api Result class providing a consistent response object for UI
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+    </members>
+</doc>

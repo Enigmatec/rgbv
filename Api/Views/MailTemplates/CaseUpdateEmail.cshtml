@@ -1,0 +1,16 @@
+﻿@model Service.Models.CaseUpdateMailModel
+@{
+    ViewData["Title"] = "Password Change";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h3>Dear @Model.Name, </h3>
+<br/>
+<br/>
+<p> The reported incident with Code: <b>@Model.IncidentCode</b> has been edited </p>
+<p> Organisation: <b> @Model.Organisation </b></p>
+<p> State: @Model.State</p>
+<p> Editor: <b> @Model.Editor </b></p>
+<p> Time: <b>@Model.TimeOfEdit</b></p>
+
+<br/>

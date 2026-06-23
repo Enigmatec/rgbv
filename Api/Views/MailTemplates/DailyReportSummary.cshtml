@@ -1,0 +1,99 @@
+﻿@model Service.Models.ReportMailModel
+@{
+
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h3>Dear @Model.Name, </h3>
+<br />
+<br />
+<center><h2> Incident Report For @Model.Date</h2></center>
+
+@if (Model.CaseReport == null)
+{
+    <h2> No Incident Report for Today</h2>
+}
+else
+{
+    <hr />
+   <center>
+    <h3>Incident By Organisation</h3>
+    <table >
+        <thead>
+            <tr>
+                <th>Organisation Name</th>
+                <th>Organisation Type</th>
+                <th>Incidents Reported</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CaseReport.CaseByOrganisation)
+            {
+                var names = item.Name.Split('-');
+                <tr>
+                    <td>@names[0]</td>
+                    <td>@names[1]</td>
+                    <td>@item.Count</td>
+                </tr>
+            }
+        <tr>
+            <td></td>
+            <td class="bold">Total Cases</td>
+            <td class="bold">@Model.CaseReport.CaseByOrganisation.Sum(c => c.Count)</td>
+        </tr>
+        </tbody>
+    </table>
+    <br />
+    <h3>Incident By State</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>Incidents Reported</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CaseReport.CaseByState)
+            {
+
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Count</td>
+                </tr>
+            }
+            <tr>
+
+                <td class="bold">Total Cases</td>
+                <td class="bold">@Model.CaseReport.CaseByOrganisation.Sum(c => c.Count)</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+    <h3>Incident By Type</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Incident Type</th>
+                <th>Incidents Reported</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CaseReport.CaseByCategory)
+            {
+
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Count</td>
+                </tr>
+            }
+
+        <tr>
+
+            <td class="bold">Total Cases</td>
+            <td class="bold">@Model.CaseReport.CaseByOrganisation.Sum(c => c.Count)</td>
+        </tr>
+        </tbody>
+    </table>
+       </center>
+}

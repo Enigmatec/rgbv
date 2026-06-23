@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migration\20210506163140_MultiLgas.cs" />
+    <Compile Remove="Migration\20210506163140_MultiLgas.Designer.cs" />
+    <Compile Remove="Migration\20210506171455_MultiLgas.cs" />
+    <Compile Remove="Migration\20210506171455_MultiLgas.Designer.cs" />
+    <Compile Remove="Migration\20211001214749_NonClusteredIndexes.cs" />
+    <Compile Remove="Migration\20211001214749_NonClusteredIndexes.Designer.cs" />
+    <Compile Remove="Migration\20211001215115_NonClusteredIndexes.cs" />
+    <Compile Remove="Migration\20211001215115_NonClusteredIndexes.Designer.cs" />
+    <Compile Remove="Migration\20211001215308_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001215308_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001215941_NonClusteredIndexes.cs" />
+    <Compile Remove="Migration\20211001215941_NonClusteredIndexes.Designer.cs" />
+    <Compile Remove="Migration\20211001220520_NonClusteredIndexes.cs" />
+    <Compile Remove="Migration\20211001220520_NonClusteredIndexes.Designer.cs" />
+    <Compile Remove="Migration\20211001221829_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001221829_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001222147_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001222147_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001222512_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001222512_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001222831_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001222831_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001223008_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001223008_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001223603_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001223603_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001223813_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001223813_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001224003_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001224003_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001224403_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001224403_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211001224453_NonClusteredIndexes2.cs" />
+    <Compile Remove="Migration\20211001224453_NonClusteredIndexes2.Designer.cs" />
+    <Compile Remove="Migration\20211004094700_CaseTimeOfDayIndex.cs" />
+    <Compile Remove="Migration\20211004094700_CaseTimeOfDayIndex.Designer.cs" />
+    <Compile Remove="Migration\20211004102600_CaseTableLengthUpdates.cs" />
+    <Compile Remove="Migration\20211004102600_CaseTableLengthUpdates.Designer.cs" />
+    <Compile Remove="Migration\20211031172946_ServicesProvided.cs" />
+    <Compile Remove="Migration\20211031172946_ServicesProvided.Designer.cs" />
+    <Compile Remove="Migration\20211105172845_PerpetratorsInformationAverageAndMonthlyIncome.cs" />
+    <Compile Remove="Migration\20211105172845_PerpetratorsInformationAverageAndMonthlyIncome.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\Base\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
